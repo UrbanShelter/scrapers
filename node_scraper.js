@@ -57,12 +57,12 @@ class ScrapedData {
 /* Data Sources */
 url = 
 {
-    kijiji: "https://www.kijiji.ca/b-real-estate/kitchener-waterloo/apartment/k0c34l1700212", 
-    imdb: "https://www.imdb.com/title/tt1229340/"
+    kijiji: "https://www.kijiji.ca/b-real-estate/kitchener-waterloo/apartment/k0c34l1700212"
 };
 
 /* Manipulate data */
-ScrapedData.Get(url.imdb).then(function(rawdata) {
+// TODO: Interpret the data structure on Kijiji
+ScrapedData.Get(url.kijiji).then(function(rawdata) {
     // Use the scraped data object
     let scrapedData = rawdata.info;
     scrapedData('.title_wrapper').filter(function(){
